@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/webrtc_vite_MUI/assets/favicon.17e50649.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebRTC Demo</title>
+    <!-- Add Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style>
+        .videos {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        video {
+            width: 45%;
+            border: 1px solid #ddd; /* A subtle border around the video elements */
+        }
+    </style>
+<script type="module" crossorigin src="/webrtc_vite_MUI/assets/index.2523d2cd.js"></script>
+  <link rel="modulepreload" href="/webrtc_vite_MUI/assets/vendor.519c7c38.js">
+  <link rel="stylesheet" href="/webrtc_vite_MUI/assets/index.ea03162d.css">
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <h2>1. Start your Webcam</h2>
+            <div class="videos">
+                <div>
+                    <h3>Local Stream</h3>
+                    <video id="webcamVideo" autoplay playsinline></video>
+                </div>
+                <div>
+                    <h3>Remote Stream</h3>
+                    <video id="remoteVideo" autoplay playsinline></video>
+                </div>
+            </div>
+
+            <button id="webcamButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                Start webcam
+            </button>
+
+            <h2>2. Create a new Call</h2>
+            <button id="callButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>
+                Create Call (offer)
+            </button>
+
+            <h2>3. Join a Call</h2>
+            <p>Answer the call from a different browser window or device</p>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="callInput">
+                <label class="mdl-textfield__label" for="callInput">Call ID</label>
+            </div>
+            <button id="answerButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>
+                Answer
+            </button>
+
+            <h2>4. Hangup</h2>
+            <button id="hangupButton" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" disabled>
+                Hangup
+            </button>
+        </main>
+    </div>
+
+    
+</body>
+</html>
